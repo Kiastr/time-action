@@ -1,0 +1,4 @@
+# 在 actions/scheduler.yml 的 pip 步骤中会自动安装（可选）
+# 例如：
+# requests>=2.31.0
+# beautifulsoup4>=4.12.0

@@ -1,0 +1,42 @@
+{
+  "_说明": "任务清单。加任务=复制一段改改；停任务=enabled 改 false。",
+  "tasks": [
+    {
+      "name": "demo",
+      "enabled": true,
+      "type": "python",
+      "module": "demo",
+      "entry": "run",
+      "env": {},
+      "notify": [
+        "console"
+      ]
+    },
+    {
+      "_注释": "↓ 这是一个模板，enabled=false 时不会跑。要用就改 true 并改成自己的逻辑",
+      "name": "my-task",
+      "enabled": false,
+      "type": "python",
+      "module": "my_task",
+      "entry": "run",
+      "env": {
+        "DEMO_TOKEN": "",
+        "SOMETHING": "value"
+      },
+      "notify": [
+        "telegram",
+        "serverchan"
+      ]
+    },
+    {
+      "_注释": "↓ Shell 类型：直接贴别人的脚本/命令，不用改写成 python",
+      "name": "legacy-script",
+      "enabled": false,
+      "type": "shell",
+      "command": "python scripts/some_legacy_script.py",
+      "notify": [
+        "console"
+      ]
+    }
+  ]
+}
